@@ -103,7 +103,9 @@ To resolve the zlib.dll error, follow these steps:
 1. Navigate to `C:\Program Files\NVIDIA Corporation\Nsight Systems 2022.4.2\host-windows-x64` and locate `zlib.dll`. Copy the file.
 
 2. Go to `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin` and paste the copied file. Rename it from `zlib.dll` to `zlibwapi.dll`.
+
 **NVIDIA Setup For Linux**
+
 1. Make sure you have a proper functioning nvidia-driver in whichever distribution of linux you are. However you donot need to anything for PopOS if you have installed the one with nvidia drivers. Thanks to their out of the box hardware support. If u wanna use PopOS.  ISO:https://pop.system76.com/  Yiepee. Thanks to The PopOS developers. After installing  the nvidia driver, Check if the nvidia driver is working using the following command.
 
 ```bash
