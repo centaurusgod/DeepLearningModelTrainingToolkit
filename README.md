@@ -6,11 +6,11 @@ Welcome to Deep Lerning Model Training Toolkit. Donot worry, even if you are a r
 - Using dedicated gpu will make the training extremly fast as compared to integrated GPU so it is recommended to use a dedicated graphics card for training.
 - If you just want to see how it works and you donn't mind using dedicated GPU then you can directly jump to Step 3
 - I feel its better to setup the python virtual environment and necessary packages first and later on setting up dedicated GPU as it will be easy for both the users.
-- I have divided the steps into 3 categories
-  -- Setting Up Environment
-  -- Setting Up GPU
-  -- Collecting Images(dataset) & How to place them in the directory 
-  -- Model Training
+- I have divided the steps into 4 categories
+  1. Setting Up Environment
+  2. Setting Up GPU
+  3. Collecting Images(dataset) & How to place them in the directory 
+  4. Model Training
 ## Step 1: Setting Virtual Environment & Necessary Packages
 ### Necessary tools & packages
 1. Anaconda (highly recommended) Link: https://www.anaconda.com/ . Its a piece of cake setting up anaconda in windows, but if you are a linux user you might face small problems, but putting up small extra effort you can easily do so. 
@@ -68,3 +68,46 @@ After opening Jupyter Notebook, change the kernel from Python to Python 3.8 (ten
 (Image section) 
 
 By this you must have sucessfully setup the environemnt required to run the notebook file. 
+- If you are just seeing to know how it works then you are already good to go. Opening jupyter notebook file and running cells will work flawlessly..
+  Open jupyter notebook
+  - In windows you can just search jupyter notebook and navigate to theese file you downlaoded from github. 
+  - In linux make sure the virtual environment is active. "tensorflow-gpu" in our case. Otherwise activate it using
+  ```bash
+  conda activate tensorflow-gpu
+  ```
+- If you want to train your custom images then you shall follow me further. 
+
+## Step 2: Setting Up Dedcated GPU for training your images ( Nvidia only)
+You need to have 2 things installed in your system whether it is windows or linux.
+- cuda
+- cuda-toolkit(you may need to signup to nvidia website to downlaod this)
+
+**NVIDIA Setup For Windows**
+
+1. Install the latest NVIDIA GPU driver for your device from [NVIDIA's official website](https://www.nvidia.com/Download/index.aspx).
+
+### Version & OS Details
+- **OS:** Windows 11
+- **Graphics Card:** Nvidia GTX 1650 4GB vRAM
+- **CUDA Version:** 11.8
+  - ![CUDA Version](guide/cuda%20version.png)
+  - Download Link: [CUDA 11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive)
+- **cuDNN Version:** 8.7
+  - ![cuDNN Version](guide/cuDNN%20version.png)
+  - Download Link: [cuDNN Archive](https://developer.nvidia.com/rdp/cudnn-archive#a-collapse870-118)
+
+*** Resolve zlib.dll Error ***
+
+To resolve the zlib.dll error, follow these steps:
+
+1. Navigate to `C:\Program Files\NVIDIA Corporation\Nsight Systems 2022.4.2\host-windows-x64` and locate `zlib.dll`. Copy the file.
+
+2. Go to `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin` and paste the copied file. Rename it from `zlib.dll` to `zlibwapi.dll`.
+**NVIDIA Setup For Linux**
+1. Make sure you have a proper functioning nvidia-driver in whichever distribution of linux you are. However you donot need to anything for PopOS if you have installed the one with nvidia drivers. Thanks to their out of the box hardware support. If u wanna use PopOS.  ISO:https://pop.system76.com/  Yiepee. Thanks to The PopOS developers. After installing  the nvidia driver, Check if the nvidia driver is working using the following command.
+
+```bash
+nvidia-smi
+```
+2. Installing cuda and cuda toolkit. Thanks again to the PopOS/system76 developers for mentioning easy way to install these in their website. If the following dont work for you, you might need to put extra effort to search and properly install cuda toolkit and cudnn in your linux system. Just do some research I am sure that you'll find solution. 
+- Follow the link: https://support.system76.com/articles/cuda/
