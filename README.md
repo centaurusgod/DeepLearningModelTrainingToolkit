@@ -56,7 +56,7 @@ To set up an Anaconda environment with TensorFlow, follow these steps:
    pip install mentioned_package_name==mentioned_package_version
    ```
    - So for numpy
-   - ```bash
+   ```bash
    pip install numpy==1.20.3
    ```
 After opening Jupyter Notebook, change the kernel from Python to Python 3.8 (tensorflow-gpu).
