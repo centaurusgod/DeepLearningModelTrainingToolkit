@@ -90,13 +90,16 @@ You need to have 2 things installed in your system whether it is windows or linu
 - **OS:** Windows 11
 - **Graphics Card:** Nvidia GTX 1650 4GB vRAM
 - **CUDA Version:** 11.8
-  - ![CUDA Version](guide/cuda%20version.png)
   - Download Link: [CUDA 11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive)
 - **cuDNN Version:** 8.7
-  - ![cuDNN Version](guide/cuDNN%20version.png)
   - Download Link: [cuDNN Archive](https://developer.nvidia.com/rdp/cudnn-archive#a-collapse870-118)
-
-*** Resolve zlib.dll Error ***
+## Read
+- Install CUDA first
+- Extract cudnn archieve that you download
+- Navigate to cuda installation directory. In our case, but make sure: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\
+- It's better if you place two windows side by side. One of cuda folder and another of cudnn archieve extracted  files.
+- Now one by one, go to folder inside extracted files of cudnn, copy it and place it inside same folder name of CUDA For example: Going to include folder of cudnn, copying all files and pasting them into same folder name include of cuda. 
+*** Do this, you won't regret ***
 
 To resolve the zlib.dll error, follow these steps:
 
@@ -113,3 +116,6 @@ nvidia-smi
 ```
 2. Installing cuda and cuda toolkit. Thanks again to the PopOS/system76 developers for mentioning easy way to install these in their website. If the following dont work for you, you might need to put extra effort to search and properly install cuda toolkit and cudnn in your linux system. Just do some research I am sure that you'll find solution. 
 - Follow the link: https://support.system76.com/articles/cuda/
+
+## Step 3 : Collecting & Preparing Images for training
+
