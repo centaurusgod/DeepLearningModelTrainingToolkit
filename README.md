@@ -1,6 +1,9 @@
 # 😀😃🥰
 Welcome to Deep Lerning Model Training Toolkit. Donot worry, even if you are a rookie I will provide you full guidance on how to setup, build your own image classification model, test the model and deploy the model as well. I won't be like most of the people who just dump their code on github and lead you to void. I assure you that you can build your own model. I will be very precise and make you aware of any errors that I faced so you will get insights on how to solve those errors on your own. I will try to be informal as possible because I believe formality cannot let our brain explore the infinite. 
 
+## Alternative
+If you just want to download and see the predictions of the model, Download
+
 ## Important
 - This guide will be helpful to those who want to train the model using nvidia gpu's or integrated gpu. I donot have any idea on setting up Radeon GPUs to train the model, so you need to figure out that on your own.
 - Using dedicated gpu will make the training extremly fast as compared to integrated GPU so it is recommended to use a dedicated graphics card for training.
@@ -22,6 +25,7 @@ Welcome to Deep Lerning Model Training Toolkit. Donot worry, even if you are a r
 - scikit-learn 1.3.2
 - scipy 1.10.1
 - tensorflow 2.10.0
+3. jupyter notebook (Comes preinstalled with anaconda only)
 ### Anaconda Environment Setup with TensorFlow & other package dependencies
 
 To set up an Anaconda environment with TensorFlow, follow these steps:
@@ -87,7 +91,7 @@ You need to have 2 things installed in your system whether it is windows or linu
 1. Install the latest NVIDIA GPU driver for your device from [NVIDIA's official website](https://www.nvidia.com/Download/index.aspx).
 
 ### Version & OS Details
-- **OS:** Windows 11
+- **OS:** Windows 11 & Windows 10
 - **Graphics Card:** Nvidia GTX 1650 4GB vRAM
 - **CUDA Version:** 11.8
   - Download Link: [CUDA 11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive)
@@ -96,11 +100,11 @@ You need to have 2 things installed in your system whether it is windows or linu
 ## Read
 - Install CUDA first
 - Extract cudnn archieve that you download
-- Navigate to cuda installation directory. In our case, but make sure: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\
+- Navigate to cuda installation directory. In our case, but make sure: `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\`
 - It's better if you place two windows side by side. One of cuda folder and another of cudnn archieve extracted  files.
 - Now one by one, go to folder inside extracted files of cudnn, copy it and place it inside same folder name of CUDA For example: Going to include folder of cudnn, copying all files and pasting them into same folder name include of cuda. 
-***Do this, you won't regret***
 
+***Do this, you won't regret***
 To resolve the zlib.dll error, follow these steps:
 
 1. Navigate to `C:\Program Files\NVIDIA Corporation\Nsight Systems 2022.4.2\host-windows-x64` and locate `zlib.dll`. Copy the file.
@@ -118,14 +122,14 @@ nvidia-smi
 - Follow the link: https://support.system76.com/articles/cuda/
 
 ## Step 3 : Collecting & Preparing Images for training
-**Image Collection**
+### Image Collection
 - If you want to collect images from google and build your own dataset, then use this extention: https://chromewebstore.google.com/detail/download-all-images/ifipmflagepipjokmbdecpmjbibjnakm
 - It'd be better if you manually pick and crop the images found in google, yes it's kinda hard work but its totally worth it.
 - Or for testing purposes you can use datasets found in **kaggle** and use it. You can skip following 1 step if you download image dataset from kaggle.But be sure of the naming convention of the folder that is used in kaggle. The **val** might have been named as **valid** or something else.
--
-**How to save these images?**
+- 
+### How to save these images?
   - For each individual class of images that you have collected you need to make a separate folderand place images belonging to that categories in the folder. For example if i collected images for apple, then i will make a folder named **Apples** and keep all the image sof apples there, same for all the images categories that you have downlaoded.
-**Splitting Images Into Test, Train & Validation Set**
+### Splitting Images Into Test, Train & Validation Set
 - First create a folder named data and place all the image folders that you have made earlier. Folder Structure. For example: data->apples
 - Now time to open anaconda prompt or python in the directory where this project exists.
 - You can see a file named split.py in the root directory where you have downlaoded this project. Or you can copy this script wherever your data folder exists. If your data folder exists in your Desktop, then copy this split.py in your desktop.
@@ -140,3 +144,15 @@ nvidia-smi
 - After running this script you will see test, train and val folder.
 - There will be some folders leftover in the **data** folder, so first we will go inside our data folder, cut those folders and place them in **train** folder.
 - Finally cut the **train**,**test**, & **val** folder and place then inside the **data** folder.
+- Hooray now we have prepared our dataset and it is ready to be trained.
+## Step 4: Training & Building The Model
+- There's a image-classification.ipynb file in this directory which contains code to train the model, as well as to save them.
+- Activate the conda environemnt `conda activate tensorflow-gpu` or your python virtual environment. In windows you can dirctly search and open for jupyter notebook as well. For linux you need to open the terminal, activate the virtual environment and open jupyter notebook using the following command.
+  ```bash
+  conda activate tensorflow-gpu
+  ```
+  ```bash
+  jupyter notebook
+  ```
+- Now from jupyter navigate to the directory where you have setup the data. Note that the notebook file and the data file must be present in the same directory.
+- **Very Important** Change your kernel in jupyter notebook from whatever you have to **tensorflow-gpu** Image:(guides/change_jupyter_kernel.png)
