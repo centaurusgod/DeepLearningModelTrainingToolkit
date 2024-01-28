@@ -129,6 +129,7 @@ nvidia-smi
 - 
 ### How to save these images?
   - For each individual class of images that you have collected you need to make a separate folderand place images belonging to that categories in the folder. For example if i collected images for apple, then i will make a folder named **Apples** and keep all the image sof apples there, same for all the images categories that you have downlaoded.
+ ![Folder Placement](guides/folder_inside_data.png)
 ### Splitting Images Into Test, Train & Validation Set
 - First create a folder named data and place all the image folders that you have made earlier. Folder Structure. For example: data->apples
 - Now time to open anaconda prompt or python in the directory where this project exists.
