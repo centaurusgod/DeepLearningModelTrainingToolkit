@@ -99,7 +99,7 @@ You need to have 2 things installed in your system whether it is windows or linu
 - Navigate to cuda installation directory. In our case, but make sure: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\
 - It's better if you place two windows side by side. One of cuda folder and another of cudnn archieve extracted  files.
 - Now one by one, go to folder inside extracted files of cudnn, copy it and place it inside same folder name of CUDA For example: Going to include folder of cudnn, copying all files and pasting them into same folder name include of cuda. 
-*** Do this, you won't regret ***
+***Do this, you won't regret***
 
 To resolve the zlib.dll error, follow these steps:
 
@@ -118,4 +118,24 @@ nvidia-smi
 - Follow the link: https://support.system76.com/articles/cuda/
 
 ## Step 3 : Collecting & Preparing Images for training
-
+**Image Collection**
+- If you want to collect images from google and build your own dataset, then use this extention: https://chromewebstore.google.com/detail/download-all-images/ifipmflagepipjokmbdecpmjbibjnakm
+- It'd be better if you manually pick and crop the images found in google, yes it's kinda hard work but its totally worth it.
+- Or for testing purposes you can use datasets found in **kaggle** and use it. You can skip following 1 step if you download image dataset from kaggle.But be sure of the naming convention of the folder that is used in kaggle. The **val** might have been named as **valid** or something else.
+**How to save these images?**
+  - For each individual class of images that you have collected you need to make a separate folderand place images belonging to that categories in the folder. For example if i collected images for apple, then i will make a folder named **Apples** and keep all the image sof apples there, same for all the images categories that you have downlaoded.
+**Splitting Images Into Test, Train & Validation Set**
+- First create a folder named data and place all the image folders that you have made earlier. Folder Structure. For example: data->apples
+- Now time to open anaconda prompt or python in the directory where this project exists.
+- You can see a file named split.py in the root directory where you have downlaoded this project. Or you can copy this script wherever your data folder exists. If your data folder exists in your Desktop, then copy this split.py in your desktop.
+- Run the following command in anaconda prompt or python
+  ```bash
+  python split.py
+  ```
+- Note that  the current split for test-train-val is in the ratio of 9.0-0.05-0.05. If you want to change this, Open split.py in a text editor and change the valus of the following line. Take care the sum must be 1 btw.
+  ```bash
+  def split_data(input_folder, output_folder, train_ratio=0.9, val_ratio=0.05, test_ratio=0.05):
+  ```
+- After running this script you will see test, train and val folder.
+- There will be some folders leftover in the **data** folder, so first we will go inside our data folder, cut those folders and place them in **train** folder.
+- Finally cut the **train**,**test**, & **val** folder and place then inside the **data** folder.
