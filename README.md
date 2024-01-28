@@ -2,7 +2,7 @@
 Welcome to Deep Lerning Model Training Toolkit. Donot worry, even if you are a rookie I will provide you full guidance on how to setup, build your own image classification model, test the model and deploy the model as well. I won't be like most of the people who just dump their code on github and lead you to void. I assure you that you can build your own model. I will be very precise and make you aware of any errors that I faced so you will get insights on how to solve those errors on your own. I will try to be informal as possible because I believe formality cannot let our brain explore the infinite. 
 
 ## Alternative
-If you just want to download and see the predictions of the model, Download
+If you just want to download and see the predictions of the model, Download the model from google drive : https://drive.google.com/file/d/1iH9_p35WGNQXdwYQnyMpMQ60cwYJUWS8/view . Refer to my github repo to see what are the classes the model is able to predict; **Link:**https://github.com/centaurusgod/CNN.ModelDeployment?tab=readme-ov-file#model-capabilities
 
 ## Important
 - This guide will be helpful to those who want to train the model using nvidia gpu's or integrated gpu. I donot have any idea on setting up Radeon GPUs to train the model, so you need to figure out that on your own.
@@ -118,6 +118,7 @@ To resolve the zlib.dll error, follow these steps:
 ```bash
 nvidia-smi
 ```
+ ![Nvidia Driver Working](guides/nvidia-smi.png)
 2. Installing cuda and cuda toolkit. Thanks again to the PopOS/system76 developers for mentioning easy way to install these in their website. If the following dont work for you, you might need to put extra effort to search and properly install cuda toolkit and cudnn in your linux system. Just do some research I am sure that you'll find solution. 
 - Follow the link: https://support.system76.com/articles/cuda/
 
@@ -130,6 +131,12 @@ nvidia-smi
 ### How to save these images?
   - For each individual class of images that you have collected you need to make a separate folderand place images belonging to that categories in the folder. For example if i collected images for apple, then i will make a folder named **Apples** and keep all the image sof apples there, same for all the images categories that you have downlaoded.
  ![Folder Placement](guides/folder_inside_data.png)
+### Optional But Recommended ( Will be easy for testing & evaluation of model's prediction)
+- Rename the image files inside classes(or folder names for example: rename all files inside apple folder with app1l1_1.jpg, apple_2.jpg etc)
+  ```bash
+  python renameFilesInsideClassesWIthTheirCLassName.py
+  ```
+   ![Reaname Files Inside Classes To Class Name](guides/rename_files_inside_classes.png)
 ### Splitting Images Into Test, Train & Validation Set
 - First create a folder named data and place all the image folders that you have made earlier. Folder Structure. For example: data->apples
 - Now time to open anaconda prompt or python in the directory where this project exists.
