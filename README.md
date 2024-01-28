@@ -137,6 +137,7 @@ nvidia-smi
   ```bash
   python split.py
   ```
+   ![Split Images](guides/split_images.png)
 - Note that  the current split for test-train-val is in the ratio of 9.0-0.05-0.05. If you want to change this, Open split.py in a text editor and change the valus of the following line. Take care the sum must be 1 btw.
   ```bash
   def split_data(input_folder, output_folder, train_ratio=0.9, val_ratio=0.05, test_ratio=0.05):
@@ -154,5 +155,7 @@ nvidia-smi
   ```bash
   jupyter notebook
   ```
-- Now from jupyter navigate to the directory where you have setup the data. Note that the notebook file and the data file must be present in the same directory.
+  ![Launch Jupyter](guides/launch_jupyter.png)
+- Now from jupyter navigate to the directory where you have setup the data. Open image-classification.ipynb file. Note that the notebook file and the data file must be present in the same directory.
 - **Very Important** Change your kernel in jupyter notebook from whatever you have to **tensorflow-gpu** ![Change Kernel](guides/change_jupyter_kernel.png)
+- Now you are good to go. The code cells contains comments through which you will know what is happenning in each section of the code cell.
