@@ -155,4 +155,4 @@ nvidia-smi
   jupyter notebook
   ```
 - Now from jupyter navigate to the directory where you have setup the data. Note that the notebook file and the data file must be present in the same directory.
-- **Very Important** Change your kernel in jupyter notebook from whatever you have to **tensorflow-gpu** Image:(guides/change_jupyter_kernel.png)
+- **Very Important** Change your kernel in jupyter notebook from whatever you have to **tensorflow-gpu** ![Change Kernel](guides/change_jupyter_kernel.png
