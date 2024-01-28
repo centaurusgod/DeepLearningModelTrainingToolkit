@@ -122,6 +122,7 @@ nvidia-smi
 - If you want to collect images from google and build your own dataset, then use this extention: https://chromewebstore.google.com/detail/download-all-images/ifipmflagepipjokmbdecpmjbibjnakm
 - It'd be better if you manually pick and crop the images found in google, yes it's kinda hard work but its totally worth it.
 - Or for testing purposes you can use datasets found in **kaggle** and use it. You can skip following 1 step if you download image dataset from kaggle.But be sure of the naming convention of the folder that is used in kaggle. The **val** might have been named as **valid** or something else.
+-
 **How to save these images?**
   - For each individual class of images that you have collected you need to make a separate folderand place images belonging to that categories in the folder. For example if i collected images for apple, then i will make a folder named **Apples** and keep all the image sof apples there, same for all the images categories that you have downlaoded.
 **Splitting Images Into Test, Train & Validation Set**
