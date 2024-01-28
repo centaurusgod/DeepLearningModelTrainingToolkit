@@ -2,7 +2,9 @@
 Welcome to Deep Lerning Model Training Toolkit. Donot worry, even if you are a rookie I will provide you full guidance on how to setup, build your own image classification model, test the model and deploy the model as well. I won't be like most of the people who just dump their code on github and lead you to void. I assure you that you can build your own model. I will be very precise and make you aware of any errors that I faced so you will get insights on how to solve those errors on your own. I will try to be informal as possible because I believe formality cannot let our brain explore the infinite. 
 
 ## Alternative
-If you just want to download and see the predictions of the model, Download the model from google drive : https://drive.google.com/file/d/1iH9_p35WGNQXdwYQnyMpMQ60cwYJUWS8/view . Refer to my github repo to see what are the classes the model is able to predict; **Link:**https://github.com/centaurusgod/CNN.ModelDeployment?tab=readme-ov-file#model-capabilities
+- If you just want to download and see the predictions of the model, Download the model from google drive : [Drive](https://drive.google.com/file/d/1iH9_p35WGNQXdwYQnyMpMQ60cwYJUWS8/view) .
+-  Refer to my github repo to see what are the classes the model is able to predict;
+[Link To Github](https://github.com/centaurusgod/CNN.ModelDeployment?tab=readme-ov-file#model-capabilities)
 
 ## Important
 - This guide will be helpful to those who want to train the model using nvidia gpu's or integrated gpu. I donot have any idea on setting up Radeon GPUs to train the model, so you need to figure out that on your own.
@@ -17,7 +19,7 @@ If you just want to download and see the predictions of the model, Download the 
 ## Step 1: Setting Virtual Environment & Necessary Packages
 ### Necessary tools & packages
 1. Anaconda (highly recommended) Link: https://www.anaconda.com/ . Its a piece of cake setting up anaconda in windows, but if you are a linux user you might face small problems, but putting up small extra effort you can easily do so. 
-   Watch this video to setup anaconda in linux ( assuming a debian distribution) : https://youtu.be/PHkCmuzgHOo
+   Watch this video to setup anaconda in linux ( assuming a debian distribution) : [Youtube Video](https://youtu.be/PHkCmuzgHOo)
 2. Packages. You need the following packages, because we call different functions and methods from these packages in our code. The most important one is tensorflow.
 - Python 3.8.0
 - numpy  1.20.3
@@ -124,7 +126,7 @@ nvidia-smi
 
 ## Step 3 : Collecting & Preparing Images for training
 ### Image Collection
-- If you want to collect images from google and build your own dataset, then use this extention: https://chromewebstore.google.com/detail/download-all-images/ifipmflagepipjokmbdecpmjbibjnakm
+- If you want to collect images from google and build your own dataset, then use this [extention](https://chromewebstore.google.com/detail/download-all-images/ifipmflagepipjokmbdecpmjbibjnakm).
 - It'd be better if you manually pick and crop the images found in google, yes it's kinda hard work but its totally worth it.
 - Or for testing purposes you can use datasets found in **kaggle** and use it. You can skip following 1 step if you download image dataset from kaggle.But be sure of the naming convention of the folder that is used in kaggle. The **val** might have been named as **valid** or something else.
 - 
