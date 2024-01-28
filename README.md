@@ -120,7 +120,9 @@ To resolve the zlib.dll error, follow these steps:
 ```bash
 nvidia-smi
 ```
- ![Nvidia Driver Working](guides/nvidia-smi.png)
+![Nvidia Driver Working](guides/nvidia-smi.png)
+
+
 2. Installing cuda and cuda toolkit. Thanks again to the PopOS/system76 developers for mentioning easy way to install these in their website. If the following dont work for you, you might need to put extra effort to search and properly install cuda toolkit and cudnn in your linux system. Just do some research I am sure that you'll find solution. 
 - Follow the link: https://support.system76.com/articles/cuda/
 
